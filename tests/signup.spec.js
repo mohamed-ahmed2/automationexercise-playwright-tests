@@ -27,13 +27,11 @@ test('register new user @momo',async({page})=>{
 
 
 
-test.only('register user with existing email',async({page})=>{
+test('register user with existing email',async({page})=>{
+    const homePage = new HomePage(page)
+    await homePage.handleCookiesPopup()
     const signuppage = new SignupPage(page)
     await signuppage.navigateToSignup()
     await signuppage.signup("testing invalid signup","email@testingteam.com")
     await expect(signuppage.existingEmailError).toBeVisible()
-    
-    
-         
-    
-    })
+                 })
