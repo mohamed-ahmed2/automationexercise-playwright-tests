@@ -3,6 +3,7 @@ const {HomePage} = require('../pages/homePage');
 const {CartPage} = require('../pages/cartPage')
 const {ProductPage} = require('../pages/product');
 const{SignupPage} = require('../pages/signupPage');
+
 test('verify that items are added to the cart ',async ({page})=>{
     const homePage = new HomePage(page)
     await homePage.navigateToHome()
