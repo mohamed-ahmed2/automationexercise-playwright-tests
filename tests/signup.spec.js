@@ -21,7 +21,7 @@ test('register new user @momo',async({page})=>{
     await homePage.deleteAccountButton.click()
     await expect(homePage.deleteConfirmationText).toBeVisible()
     await homePage.clickOnContinue()
-    await page.pause()
+    
     
 })
 
