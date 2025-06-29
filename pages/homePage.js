@@ -70,10 +70,16 @@ async clickonTestCases(){
   await this.testCasesButton.click()
 }
 async handleCookiesPopup(){
-  //aria-label="Manage options"
-  //Confirm choices
+  
+const cookies_popup_count = await this.manageOptionsButton.count()
+
+if(cookies_popup_count > 0){
 await this.manageOptionsButton.click()
 await this.confirmChoicesButton.click()
+
+}
+  
+
 }
 
 async clickonProducts(){
